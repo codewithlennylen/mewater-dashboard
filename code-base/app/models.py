@@ -18,6 +18,7 @@ class User(db.Model):
     pword = db.Column(db.String(256), nullable=False)  # Owner-pword
     # A user must change their passwords to be verified.
     is_verified = db.Column(db.Integer, nullable=False, default=0)
+    unit_cost = db.Column(db.Integer, nullable=True, default=100)
     # image = db.Column(db.String(200), nullable=True) # Profile Picture > Passport [cloudinary]
 
     # TIMESTAMP
@@ -38,16 +39,18 @@ class User(db.Model):
 
         return User.query.get(user_id)
 
+
 class Consumption(db.Model):
     __tablename__ = 'consumption'  # Explicit is better than implicit.
 
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, nullable=True) # user.id = 1 || DB Relationship
+    # user.id = 1 || DB Relationship
+    user_id = db.Column(db.Integer, nullable=True)
     actual_cost_today = db.Column(db.Integer, nullable=False)  # KES. 850
     projected_monthly_cost = db.Column(db.Integer, nullable=False)  # KES. 1350
     previous_cost_saving = db.Column(db.Integer, nullable=False)  # KES. 520
-    date = db.Column(db.String(100), nullable=True) # keep track of 'today'
-    
+    date = db.Column(db.String(100), nullable=True)  # keep track of 'today'
+
     # TIMESTAMP
     timeStamp = db.Column(
         db.DateTime, default=datetime.datetime.utcnow)  # Auto-Generated
@@ -57,12 +60,14 @@ class WaterForecast(db.Model):
     __tablename__ = 'water_forecast'  # Explicit is better than implicit.
 
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, nullable=True) # user.id = 1 || DB Relationship
-    
+    # user.id = 1 || DB Relationship
+    user_id = db.Column(db.Integer, nullable=True)
+
     projected_weekly_water = db.Column(JSON, nullable=False)  # KES. 1350
-    
-    date = db.Column(db.String(100), nullable=True) # keep track of 'next week'
-    
+
+    # keep track of 'next week'
+    date = db.Column(db.String(100), nullable=True)
+
     # TIMESTAMP
     timeStamp = db.Column(
         db.DateTime, default=datetime.datetime.utcnow)  # Auto-Generated
