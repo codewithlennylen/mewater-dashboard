@@ -3,13 +3,13 @@
 
 <!-- Info Cards -->
 <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-6 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Consumption</p>
+                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Current Consumption</p>
                             <h5 class="font-weight-bolder">
                                 610 Litres
                             </h5>
@@ -20,23 +20,23 @@
                         </div>
                     </div>
                     <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                        <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
+                            <i class="ni ni-watch-time text-lg opacity-10" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-6 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Actual Cost Today</p>
+                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Detected Leaks</p>
                             <h5 class="font-weight-bolder">
-                                KES. 850
+                                None
                             </h5>
                             <!-- <p class="mb-0">
                       <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -45,72 +45,25 @@
                         </div>
                     </div>
                     <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Projected Monthly Cost</p>
-                            <h5 class="font-weight-bolder">
-                                KES. 1350
-                            </h5>
-                            <!-- <p class="mb-0">
-                      <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                      since last quarter
-                    </p> -->
-                        </div>
-                    </div>
-                    <div class="col-4 text-end">
                         <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                            <i class="ni ni-settings text-lg opacity-10" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6">
-        <div class="card">
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Previous Cost Savings</p>
-                            <h5 class="font-weight-bolder text-success">
-                                KES. 520
-                            </h5>
-                            <!-- <p class="mb-0">
-                                <span class="text-success text-sm font-weight-bolder">5 POINTS</span>
-                            </p> -->
-                        </div>
-                    </div>
-                    <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
 <!-- End of Info Cards -->
 
-<!-- Actual Charts -->
+
+<!-- Hourly Charts -->
 <div class="row mt-4">
     <div class="col-lg-5 mb-lg-0 mb-4">
         <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-capitalize">Water Usage Today</h6>
+                <h6 class="text-capitalize">Water Usage - [[Hour]]</h6>
                 <!-- <p class="text-sm mb-0">
                 <i class="fa fa-arrow-up text-success"></i>
                 <span class="font-weight-bold">4% more</span> in 2021
@@ -118,7 +71,45 @@
             </div>
             <div class="card-body p-3">
                 <div class="chart">
-                    <canvas id="actual-chart-pie" class="chart-canvas" height="300"></canvas>
+                    <canvas id="hourly-chart-pie" class="chart-canvas" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 mb-lg-0 mb-4">
+        <div class="card z-index-2 h-100">
+            <div class="card-header pb-0 pt-3 bg-transparent">
+                <h6 class="text-capitalize">Water Usage - [[Hour]]</h6>
+                <!-- <p class="text-sm mb-0">
+                <i class="fa fa-arrow-up text-success"></i>
+                <span class="font-weight-bold">4% more</span> in 2021
+              </p> -->
+            </div>
+            <div class="card-body p-3">
+                <div class="chart">
+                    <canvas id="hourly-chart-line" class="chart-canvas" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Hourly Charts -->
+
+
+<!-- Daily Charts -->
+<div class="row mt-4">
+    <div class="col-lg-5 mb-lg-0 mb-4">
+        <div class="card z-index-2 h-100">
+            <div class="card-header pb-0 pt-3 bg-transparent">
+                <h6 class="text-capitalize">Water Usage - [[Today]]</h6>
+                <!-- <p class="text-sm mb-0">
+                <i class="fa fa-arrow-up text-success"></i>
+                <span class="font-weight-bold">4% more</span> in 2021
+              </p> -->
+            </div>
+            <div class="card-body p-3">
+                <div class="chart">
+                    <canvas id="daily-chart-pie" class="chart-canvas" height="300"></canvas>
                 </div>
             </div>
         </div>
@@ -134,20 +125,20 @@
             </div>
             <div class="card-body p-3">
                 <div class="chart">
-                    <canvas id="actual-chart-line" class="chart-canvas" height="300"></canvas>
+                    <canvas id="daily-chart-line" class="chart-canvas" height="300"></canvas>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- End of Actual Charts -->
+<!-- End of Daily Charts -->
 
-<!-- Prediction Charts -->
+<!-- Weekly Charts -->
 <div class="row mt-4">
     <div class="col-lg-5 mb-lg-0 mb-4">
         <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-capitalize text-danger">Forecasted Water Usage Next Week</h6>
+                <h6 class="text-capitalize">Water Usage - [[Month]]</h6>
                 <!-- <p class="text-sm mb-0">
             <i class="fa fa-arrow-up text-success"></i>
             <span class="font-weight-bold">4% more</span> in 2021
@@ -155,7 +146,7 @@
             </div>
             <div class="card-body p-3">
                 <div class="chart">
-                    <canvas id="pred-chart-pie" class="chart-canvas" height="300"></canvas>
+                    <canvas id="weekly-chart-pie" class="chart-canvas" height="300"></canvas>
                 </div>
             </div>
         </div>
@@ -163,7 +154,7 @@
     <div class="col-lg-7 mb-lg-0 mb-4">
         <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-capitalize text-danger">Forecasted Water Usage Next Week</h6>
+                <h6 class="text-capitalize">Water Usage - [[Month]]</h6>
                 <!-- <p class="text-sm mb-0">
             <i class="fa fa-arrow-up text-success"></i>
             <span class="font-weight-bold">4% more</span> in 2021
@@ -171,13 +162,13 @@
             </div>
             <div class="card-body p-3">
                 <div class="chart">
-                    <canvas id="pred-chart-line" class="chart-canvas" height="300"></canvas>
+                    <canvas id="weekly-chart-line" class="chart-canvas" height="300"></canvas>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- End of Actual Charts -->
+<!-- End of Weekly Charts -->
 
 <!-- Leakage Table -->
 <div class="row mt-4">
@@ -214,7 +205,7 @@
                                             <i class="ni ni-bold-right me-3 my-auto"></i>
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">Bathroom Tap</h6>
+                                            <h6 class="mb-0 text-sm">Outlet 1</h6>
                                             <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
                                         </div>
                                     </div>
@@ -227,7 +218,7 @@
                                     <span class="badge badge-sm bg-gradient-danger">LEAKAGE</span>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <span class="text-danger text-xs font-weight-bold">30</span>
+                                    <span class="text-danger text-xs font-weight-bold">8</span>
                                 </td>
                             </tr>
                             <tr>
@@ -239,57 +230,7 @@
                                             <i class="ni ni-bold-right me-3 my-auto"></i>
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">Lavatory</h6>
-                                            <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="text-xs font-weight-bold mb-0">Washroom</p>
-                                    <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <span class="badge badge-sm bg-gradient-success">OK</span>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <span class="text-secondary text-xs font-weight-bold">0</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div>
-                                            <!-- <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                alt="user1"> -->
-                                            <i class="ni ni-bold-right me-3 my-auto"></i>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">Shower</h6>
-                                            <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="text-xs font-weight-bold mb-0">Washroom</p>
-                                    <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <span class="badge badge-sm bg-gradient-success">OK</span>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <span class="text-secondary text-xs font-weight-bold">0</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div>
-                                            <!-- <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                alt="user1"> -->
-                                            <i class="ni ni-bold-right me-3 my-auto"></i>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">Kitchen Sink</h6>
+                                            <h6 class="mb-0 text-sm">Outlet 2</h6>
                                             <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
                                         </div>
                                     </div>
@@ -305,32 +246,6 @@
                                     <span class="text-secondary text-xs font-weight-bold">0</span>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div>
-                                            <!-- <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                alt="user1"> -->
-                                            <i class="ni ni-bold-right me-3 my-auto"></i>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">Bathroom Sink</h6>
-                                            <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="text-xs font-weight-bold mb-0">Washroom</p>
-                                    <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <span class="badge badge-sm bg-gradient-success">OK</span>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <span class="text-secondary text-xs font-weight-bold">0</span>
-                                </td>
-                            </tr>
-
 
                         </tbody>
                     </table>
@@ -342,10 +257,133 @@
 
 <!-- End of Leakage Table -->
 
-
-<!-- Actual Line Chart -->
+<!-- Hourly Line Chart -->
 <script>
-    var ctx1 = document.getElementById("actual-chart-line").getContext("2d");
+    var ctx1 = document.getElementById("hourly-chart-line").getContext("2d");
+
+    var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
+    new Chart(ctx1, {
+        type: "line",
+        data: {
+            labels: ["8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM"],
+            datasets: [{
+                label: "Water Used",
+                tension: 0.4,
+                borderWidth: 0,
+                pointRadius: 0,
+                borderColor: "#8392ab",
+                backgroundColor: gradientStroke1,
+                borderWidth: 3,
+                fill: true,
+                data: [400, 200, 300, 220, 350, 500, 300, 400, 200, 300, 220, 350],
+                maxBarThickness: 6
+
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        padding: 10,
+                        color: '#fbfbfb',
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        color: 'black',
+                        padding: 20,
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
+        },
+    });
+</script>
+
+<!-- Hourly Pie Chart -->
+<script>
+    var ctx1 = document.getElementById("hourly-chart-pie").getContext("2d");
+
+    var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
+    new Chart(ctx1, {
+        type: "pie",
+        data: {
+            labels: ["Outlet 1", "Outlet 2"],
+            datasets: [{
+                label: "Water Used",
+                backgroundColor: [
+                    '#2dce89',
+                    '#5e72e4'
+                ],
+                // fill: true,
+                data: [20, 60],
+                hoverOffset: 5
+
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                }
+            },
+
+        },
+    });
+</script>
+
+<!-- Daily Line Chart -->
+<script>
+    var ctx1 = document.getElementById("daily-chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
@@ -361,7 +399,7 @@
                 tension: 0.4,
                 borderWidth: 0,
                 pointRadius: 0,
-                borderColor: "#5e72e4",
+                borderColor: "#8392ab",
                 backgroundColor: gradientStroke1,
                 borderWidth: 3,
                 fill: true,
@@ -428,9 +466,9 @@
     });
 </script>
 
-<!-- Actual Pie Chart -->
+<!-- Daily Pie Chart -->
 <script>
-    var ctx1 = document.getElementById("actual-chart-pie").getContext("2d");
+    var ctx1 = document.getElementById("daily-chart-pie").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
@@ -440,18 +478,15 @@
     new Chart(ctx1, {
         type: "pie",
         data: {
-            labels: ["Lavatory", "Shower", "Kitchen Sink", "Bathroom Sink", "Bathroom Tap"],
+            labels: ["Outlet 1", "Outlet 2"],
             datasets: [{
                 label: "Water Used",
                 backgroundColor: [
-                    '#5e72e4',
-                    '#fb6340',
                     '#2dce89',
-                    '#f5365c',
-                    '#8392ab'
+                    '#5e72e4'
                 ],
                 // fill: true,
-                data: [120, 300, 110, 20, 60],
+                data: [120, 300],
                 hoverOffset: 5
 
             }],
@@ -471,29 +506,29 @@
 </script>
 
 
-<!-- Forecast Line Chart -->
+<!-- Weekly Line Chart -->
 <script>
-    var ctx1 = document.getElementById("pred-chart-line").getContext("2d");
+    var ctx1 = document.getElementById("weekly-chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke1.addColorStop(1, 'rgba(245, 54, 92, 0.2)');
-    gradientStroke1.addColorStop(0.2, 'rgba(245, 54, 92, 0.0)');
-    gradientStroke1.addColorStop(0, 'rgba(245, 54, 92, 0)');
+    gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
     new Chart(ctx1, {
         type: "line",
         data: {
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [{
                 label: "Predicted Water Need",
                 tension: 0.4,
                 borderWidth: 0,
                 pointRadius: 0,
-                borderColor: "#f5365c",
+                borderColor: "#8392ab",
                 backgroundColor: gradientStroke1,
                 borderWidth: 3,
                 fill: true,
-                data: [420, 190, 350, 300, 290, 490, 320],
+                data: [420, 300, 350, 290],
                 maxBarThickness: 6
 
             }],
@@ -556,9 +591,9 @@
     });
 </script>
 
-<!-- Forecast Pie Chart -->
+<!-- Weekly Pie Chart -->
 <script>
-    var ctx1 = document.getElementById("pred-chart-pie").getContext("2d");
+    var ctx1 = document.getElementById("weekly-chart-pie").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
@@ -568,18 +603,15 @@
     new Chart(ctx1, {
         type: "pie",
         data: {
-            labels: ["Lavatory", "Shower", "Kitchen Sink", "Bathroom Sink", "Bathroom Tap"],
+            labels: ["Outlet 1", "Outlet 2"],
             datasets: [{
                 label: "Predicted Water Need",
                 backgroundColor: [
-                    '#5e72e4',
-                    '#fb6340',
                     '#2dce89',
-                    '#f5365c',
-                    '#8392ab'
+                    '#5e72e4',
                 ],
                 // fill: true,
-                data: [140, 320, 150, 22, 65],
+                data: [140, 320],
                 hoverOffset: 5
 
             }],
