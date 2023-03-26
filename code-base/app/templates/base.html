@@ -46,7 +46,7 @@
         aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" #">
         <img src="{{ url_for('static', filename='img/favicon.png')}}" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">MeWater</span>
+        <span class="ms-1 font-weight-bold">Hydrosentry</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -67,7 +67,7 @@
     </div>
     <div class="sidenav-footer mx-3 ">
       <div class="card card-plain shadow-none" id="sidenavCard">
-        <img class="w-50 mx-auto" src="{{ url_for('static', filename='img/me-water.png') }}" alt="sidebar_illustration">
+        <!-- <img class="w-50 mx-auto" src="" alt="sidebar_illustration"> -->
         <div class="card-body text-center p-3 w-100 pt-0">
           <div class="docs-info">
             <h6 class="mb-0">Curious to Learn More?</h6>
@@ -99,12 +99,12 @@
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item ps-3 d-flex align-items-center">
-              <p class="my-auto text-lg text-white">[[Mar 25, 2023]]</p>
+              <p class="my-auto text-lg text-white">{{ current_date }}</p>
             </li>
             <li class="nav-item d-flex align-items-center">
               <a href="#" class="nav-link text-white font-weight-bold px-3">
                 <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Lenny Ng'ang'a</span>
+                <span class="d-sm-inline d-none">Hydrosentry</span>
               </a>
             </li>
 
