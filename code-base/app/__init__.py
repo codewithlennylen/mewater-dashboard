@@ -54,7 +54,7 @@ def create_app():
     app.register_blueprint(dashboard_view)
     app.register_blueprint(report_view)
 
-    # from app import models
+    from app import models
 
     # # ? user-loader -> Flask-login specific
     # from app.models import User
