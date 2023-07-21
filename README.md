@@ -141,6 +141,17 @@ The cloud architecture diagram is as shown below. [Read more here.](https://gith
    python3 -m venv venv
    ```
 
+5. Activate Virtual Environment
+
+   \[Linux]
+   ```sh
+   source venv/bin/activate
+   ```
+   \[Windows]
+    ```sh
+   source venv/scripts/activate
+   ```
+   
 5. Install project requirements
 
    ```sh
